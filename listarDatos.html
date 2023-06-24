@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!--SweetAlert2-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>Listar</title>
+
+
+</head>
+<body onload="listarDatos()">
+    <div class="container">
+      <br><br><a href="./registrarHurto.html"><button type="button">Registrar Hurto</button></a><br><br>
+        <table class="striped ">
+            <thead>
+                <tr>
+                    <th>
+                        Dirección
+                    </th>
+                    <th>
+                      Nombre
+                    </th>
+                    <th>
+                        Latitud
+                    </th>
+                    <th>
+                        Longitud
+                    </th>
+                    <th>
+                        Descripción
+                    </th>
+                    <th>
+                        Fecha
+                  </th>
+                </tr>
+            </thead>
+            <tbody id="contenido">
+
+            </tbody>
+        </table>
+
+    </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="container">
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="direccion" type="text" class="validate" placeholder="Dirección">
+                  <label for="direccion">Dirección</label>
+                  <span id="direccionError" class="erroresFormulario"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="latitud" type="text" class="validate" placeholder="nombre" required>
+                  <label for="nombre">Nombre</label>
+                  <span id="nombreError" class="erroresFormulario"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="latitud" type="number" class="validate" placeholder="Latitud" required>
+                  <label for="latitud">Latitud</label>
+                  <span id="latitudError" class="erroresFormulario"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="longitud" type="number" class="validate" placeholder="Longitud" required>
+                  <label for="longitud">Longitud</label>
+                  <span id="longitudError" class="erroresFormulario"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">accessibility</i>
+                  <input id="descripcion" type="text" class="validate" placeholder="Descripción" required>
+                  <label for="descripcion">Descripción</label>
+                  <span id="descripcionError" class="erroresFormulario"></span>
+                </div>
+              </div>
+                <button id="btnActualizar" class="btn waves-effect waves-light" type="button" name="action">Actualizar
+                </button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <script src="js/funciones.js"></script>
+  
+  <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+    </script>
+</body>
+</html>
